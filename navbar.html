@@ -5,100 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/4f1332504f.js" crossorigin="anonymous"></script>
-<style>
-    #Box{
-        background-color: blue;
-        display: flex;
-        padding: 20px;      
-    }
-
-   p{
-    color: white;
-    /* font-size: bold; */
-    font-weight: bold;
-  }
-   #Box>div{
-    height: 100%;
-    width:30%;
-    display: flex;
-    color: white;
-    gap: 10px;
-
-  }
-   #Box>div:nth-child(2){
-    display: flex;
-    margin-left: 500px;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 13px;
-  }
-  #Box>div:nth-child(1){
-    display: flex;
-    /* justify-content: flex-start; */
-    align-items: center;
-    /* padding-left: 20px; */
-    margin-left: 100px;
-    font-size: 25px;
-    /* border: 2px solid red; */
-  }
-  a{
-    text-decoration: none;
-    color: aliceblue;
-  }
-  input[type="text"]{
-  /* float: right;
-  padding: 8px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px; */
-  position: absolute;
-                /* top: 355px; */
-                /* left: 575px; */
-                height: 30px;
-                width: 400px;
-                margin-left: 100px;
-  }
-  button[type="submit"]{
-    /* border: 10px solid red; */
-    /* height: 1004px; */
-    margin-left: 400px;
-    height: 36px;
-    width: 50px;
-  }
- /* .fa-search{ */
-    /* border: 10px solid red; */
-    /* position: absolute; */
-    /* margin: auto; */
-    /* left: 610px; */
-  
- /* } */
- .fa-shop{
-    margin-left: 170px;
- }
- h6{
-    display: flex;
- }
-</style>
+    <link rel="stylesheet" href="navbar.css">
+   <style>
+    
+   </style>
 </head>
 <body>
-    <div id="Box">
-        <div>
-            <i class="fa-solid fa-bars"></i>
-            <p>Menu</p>
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <i class="fa-solid fa-shop"></i>
-            <h6>North Anchorage</h6>
-        </div>
-        <div>
-            <p><a href="mens.html">Men</a></p>
-            <p>Women</p>
-            <p><a href="login.html">Login</a> </p>
-            <p><a href="signup.html">Signup</a> </p>
-        </div>
+    <div id="navbar">
+         <div id="topContainer">
+             <div id="topNav">
+                   <img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/BestBuy_Logo_2020-190616.png" alt="">
+                   <button id="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="">
+                    <span>Menu</span>
+                   </button>
+                   <div id="searchBar">
+                    <input type="search" id="search" placeholder="Search Best Buy">
+                      <img id="SearchBarTag" src="https://t3.ftcdn.net/jpg/03/25/73/68/240_F_325736897_lyouuiCkWI59SZAPGPLZ5OWQjw2Gw4qY.jpg" alt="">
+                   </div>
+                   <div id="store">
+                       <img src="https://cdn-icons-png.flaticon.com/512/126/126122.png" alt="">
+                       <span>North Anchorage</span>
+                   </div>
+                   <div id="cart">
+                         <img src="https://cdn-icons-png.flaticon.com/512/34/34627.png" alt="">
+                         <a href="cart.html" id="CartHtml">Cart</a>
+                   </div>
+             </div> 
+         </div>
+         <div id="bottomNavbar">
+              <div id="Deals">
+                <a href="">Back to School</a>
+                <a href="">Top deals</a>
+                <a href="">Deals of the Day</a>
+                <a href="">Totaltech Membership</a>
+                <a href="">more</a>
+                <select id="">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+              </div>
+              <div id="status">
+                   <ul>
+                    <li>
+                        Account
+                        <div id="sublink">
+                             <ul>
+                                <li> <a href="login.html">Sign In</a></li>
+                                <li><a href="signUp.html">Create an Account</a></li>
+                                <li>
+                                   <p>Your Products</p> 
+                                </li>
+                                <li>
+                                    <p>Order and Purcheses</p>
+                                </li>
+                             </ul>
+                        </div>
+                    </li>
+                    <li>Recently viewed</li>
+                    <li>Order Status</li>
+                    <li>Saved Items</li>
+                   </ul>
+              </div>
+         </div> 
     </div>
-    
 </body>
 </html>
+<script src="Navbar.js"></script>>
