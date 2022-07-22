@@ -6,6 +6,6 @@ function myFunction(event){
     let selected=document.querySelector("#search").value
        console.log(selected)
     if(selected=="All"){
-         window.location.href="product.html"
+         window.location.href="product-1.html"
     }
 }
