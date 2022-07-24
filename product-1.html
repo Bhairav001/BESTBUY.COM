@@ -70,6 +70,23 @@
              </div>
         </div> 
    </div>
+   <select id="filterBrand" onchange="handleBrandFilter()">
+    <option value="">Filter By Brand</option>
+    <option value="Samsung">Samsung</option>
+    <option value="Apple">Apple</option>
+    <option value="OnePlus">OnePlus</option>
+    <option value="Motorola">Motorola</option>
+  </select>
+   <select id="sortNames" onchange="handleByName()">
+    <option value="">Sort By Name</option>
+    <option value="asc">Ascending</option>
+    <option value="dec">Descending</option>
+  </select>
+   <select id="sortPrice" onchange="handleByPrice()">
+    <option value="">Sort By Price</option>
+    <option value="HTL">High to Low</option>
+    <option value="LTH">Low to High</option>
+   </select>
   
 </body>
 </html>

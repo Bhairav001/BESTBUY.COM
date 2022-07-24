@@ -48,7 +48,52 @@ button:hover{
     background-color: blue;
     color: white;
 }
-
+#sortPrice{
+    margin-left: 1020px;
+    /* border: 1px solid red; */
+    font-weight: bold;
+    display: block;
+    /* margin: auto; */
+    padding: 10px 30px;
+    color: blue;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#sortNames{
+    margin-left: 1020px;
+    /* margin-bottom: 30px; */
+    /* border: 1px solid red; */
+    font-weight: bold;
+    display: block;
+    /* margin: auto; */
+    padding: 10px 30px;
+    color: blue;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#filterBrand{
+    /* margin-left: 1020px; */
+/* border: 1px solid red; */
+font-weight: bold;
+display: block;
+/* margin: auto; */
+padding: 10px 30px;
+color: blue;
+font-weight: bold;
+background-color: white;
+border: 1px solid blue;
+border-radius: 5px;
+cursor: pointer;
+margin-bottom: 20px;
+  }
  /* Medium screens */
 @media only screen and (min-width: 421px) and (max-width: 780px) {
     #container{
