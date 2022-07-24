@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            width: 60%;
+            gap: 20px;
+            margin: auto;
+        }
+        #container img{
+            margin: auto;
+            width: 100px;
+            height: 100px;
+        }
+        #container h3{
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        #top{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: rgb(236,236,236);
+           
+        }
+        #left{
+            margin-top: 30px;
+            margin-left: 120px;
+        }
+        #left>img{
+            width: 100px;
+            /* height: 100px; */
+        }
+        #left h3{
+            color: blue;
+        }
+        #right>img{
+            width: 220px;
+            margin-left: 220px;
+        }
+        #bottom-1{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 30px;
+            /* width: 70%; */
+        }
+        #bot-1{
+            margin-left: 40px;
+            padding: 30px;
+            width: 80%;
+            background-color: rgb(236,236,236);
+        }
+        #small{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top: 20px;
+            background-color: blue;
+        }
+        #small img{
+            width: 300px;
+        }
+        #small-1 h1{
+            color: white;
+        }
+        #sm-1{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* margin: auto; */
+            margin-top: 30px;
+         
+        }
+        #small-1>p{
+            color: white;
+        }
+        #sm-2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* margin: auto; */
+            margin-top: 30px;
+         
+        }
+        #sm-3{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* margin: auto; */
+            margin-top: 30px;
+         
+        }
+        #sm-4{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* margin: auto; */
+            margin-top: 30px;
+         
+        }
+        #main img{
+            width: 200px;
+        }
+        #btm-1{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 70%;
+            margin: auto;
+            background-color:  rgb(236,236,236);
+        }
+        #btm-2{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;
+            gap: 20px;
+            /* background-color:  rgb(236,236,236); */
+        }
+        #btm-2 img{
+            width: 240px;
+        }
+        #top{
+            background-color: blue;
+            display: flex;
+        }
+        #top>img{
+            width: 74px;
+            margin-left: 60px;
+           
+        }
+        #top>p{
+            color:  white;
+            margin-left: 800px;
+           
+            
+        }
+        #top a{
+            color: white;
+        }
+        #MainFooter{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+      #MainFooter p{
+        color: blue;
+      }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <img src="data:image/png;base64,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" alt="">
+        <p><a href="index.html">return to previous page</a></p>
+   </div>
+    <h3>Best Buy Totaltech™</h3>
+    <p>Already a member? Go to your account to manage benefits and get support</p>
+    <div id="top" >
+        <div id="left" >
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/gl-66004-tt-logo-der-2x-215847.png" alt="">
+            <h3>The membership you and your tech deserve.</h3>
+            <img src="https://confirmedbest.com/ViewAssets/Images/4.5stars.svg" alt="">(6069 views)
+            <h4>$199.99 yearly membership</h4>
+            <button>Add to Cart</button>
+        </div>
+        <div id="right">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/custom-sm-bg-tts-gl67745-52a13f6e-024c-4f0e-bd92-d3ce5851d96d.png" alt="">
+        </div>
+    </div>
+   <h1>Benefits of a Best Buy Totaltech™ membership.</h1>
+   <div id="container" >
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/benefits-GeekSquad-Logo-gl65363-ee4a55b0-4617-42aa-8224-8ac621634780.jpg" alt="">
+        <h4>Free Geek Squad® tech support available 24/7/365.</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-protection-icon-f7d4ed27-1e4d-47b9-bd96-7cc826906670.jpg" alt="">
+        <h4>Up to 24 months of product protection with an active membership</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-repair-icon-af909eb3-4cd0-4a9a-b146-ec15b0ee8545.jpg" alt="">
+        <h4>Free delivery
+            and standard installation for new Best Buy purchases.2</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-vip-icon-709a40f6-0d5a-42ff-b755-76e3fed483fa.jpg" alt="">
+        <h4>VIP access to dedicated phone and chat teams.</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-save-icon-7663465b-4dcf-44a4-b3e4-eeda91972bf1.jpg" alt="">
+        <h4>Access to exclusive Totaltech member prices.</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-shipping-icon-aecefc6a-cf2b-4cf6-ba03-a9474b28b3d2.jpg" alt="">
+        <h4>Free 2-day shipping.3</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-return-icon-9fe2eb3e-88e3-4611-b535-0be625bf584f.jpg" alt="">
+        <h4>Extended 60-day return and exchange window on most products.4</h4>
+       </div>
+       <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol-85267-save-icon-7663465b-4dcf-44a4-b3e4-eeda91972bf1.jpg" alt="">
+        <h4>Everyday savings on repairs, advanced services and more.</h4>
+       </div>
+   </div>
+  <div id="bottom-1">
+    <div>
+        <img src="https://d2vxgxvhgubbj8.cloudfront.net/thumbnails/1937/1242823725_1_Flv_512x288_thumb_2.jpg" alt="">
+    </div>
+    <div id="bot-1">
+        <h1>Learn more about the benefits.</h1>
+        <p>Hear more about the exclusive membership benefits that make it easy to buy and care for the tech you need, use and love every day.</p>
+    </div>
+  </div> 
+   <div id="small" >
+         <div>
+          <img style="color: white; background-color: blue;" src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/total-tech-stacked-reverse-sol86118-059fc768-50d8-43ab-b62a-3bded1b62731.png" alt="">
+          <button>Shop Now</button>
+         </div>
+         <div id="small-1">
+            <h1>Totaltech member exclusive offers.</h1>
+            <p>Whether you’re a Totaltech member or thinking of joining, here are today’s featured deals, with many more available online and in store.</p>
+         </div>
+   </div>
+  <div id="sm-1">
+    <div>
+        <img style="margin-left: 40px;" src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/MMT-236666-geek-agent-177925.jpg;maxHeight=455;maxWidth=484" alt="">
+
+    </div>
+    <div style="margin-left: 40px;">
+        <h1>Tech help, day and night.</h1>
+        <p>Let us be your guide through the easiest and most difficult tech questions. Get unlimited 24/7/365 tech support on all the technology in your home, no matter where you bought it. Were always ready to help you in store, over the phone and 24/7 online.</p>
+        <a href="">Learn more about Geek Squad® support</a>
+    </div>
+  </div>
+  <div id="sm-2">
+    <div style="margin-left: 40px;">
+        <h1>The tech you love, protected.</h1>
+        <p>Say goodbye to debating whether to add protection when you buy new tech. With Totaltech, you’ll get up to 24 months of product protection on most new Best Buy purchases, including AppleCare+ on Apple products, with an active membership.1 For most portable devices, plans also include protection against drops and spills.</p>
+        <a href="">Learn more about protection</a>
+    </div>
+    <div>
+        <img style="margin-left: 40px;" src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/EVN-201268-applecare-protection-v2-pol-der-6f4137c1-ae6d-4b5a-b08a-818e84a8bd5c.jpg;maxHeight=455;maxWidth=484" alt="">
+
+    </div>
+  </div>
+  <div id="sm-3">
+    <div>
+        <img style="margin-left: 40px;" src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/gl-66004-install-pol-v2-der-a5ea3646-ed18-4943-9dfd-fc6fc43537b1.jpg;maxHeight=455;maxWidth=484" alt="">
+
+    </div>
+    <div style="margin-left: 40px;">
+        <h1>Free delivery, standard installation and haul-away</h1>
+        <h4>with new Best Buy purchases.</h4>
+        <p>From TV mounting to installing a smart video doorbell, there’s a huge list of in-home installation services that we’ll do for free when you purchase your product from Best Buy.2 You’ll also get free delivery on Best Buy purchases and free haul-away for most TV and major appliance replacements.5</p>
+        <a href="">See the installs we’ll do for free with a product purchase</a>
+    </div>
+  </div>
+  <div id="sm-4">
+    <div style="margin-left: 40px;">
+        <h1>Enjoy VIP access to dedicated phone and chat teams.</h1>
+        <p>Get expert advice, product recommendations, appointment support and much more. Connect with us through a dedicated Totaltech support line, available 24/7/365.</p>
+        <!-- <a href="">Learn more about protection</a> -->
+    </div>
+    <div>
+        <img style="margin-left: 40px;" src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/gl-66004-vip-pol-der-dceebe1b-ba85-45fe-9408-baad357a273b.jpg;maxHeight=455;maxWidth=484" alt="">
+     </div>
+    </div>
+    <h1>Even more Best Buy Totaltech™ benefits.</h1>
+    <div style="display: flex;" id="main">
+        <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/gl-66004-pricing-pol-v2-der-215911.jpg" alt="">
+            <h3>Exclusive member pricing.</h3>
+            <p style="width: 90%;">Take advantage of discounts on select products and services throughout the year.6</p>
+            <a href="">shop now</a>
+        </div>
+        <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/sol83704-entrypoint-pol-der-b2582a14-5d1d-47ce-b868-49807f8d4ce0.jpg" alt="">
+            <h3>Get free 2-day shipping.</h3>
+            <p style="width: 90%;">You’ll also get free same-day delivery whenever available. No minimum purchase required.3</p>
+            <!-- <a href="">shop now</a> -->
+        </div>
+        <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/top-EVN-188981-NvidiaRTX-StoreEvent-BBY_Store_DER-67e06f75-2c5d-439f-9151-987612bb672c.jpg" alt="">
+            <h3>Get more time to return.</h3>
+            <p style="width: 90%;">Enjoy an extended 60-day return and exchange window on most products. Plus, all restocking fees will be waived.4</p>
+            <a href="">Learn more about extended returns
+            </a>
+        </div>
+        <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/gl-66004-tt-repair-pol-v2-der-215912.jpg" alt="">
+            <h3>Everyday savings on repairs and more.</h3>
+            <p style="width: 90%;">Save 20% on labor for repairs and advanced services, and 10% on labor for custom installations.7</p>
+            <a href="">Learn about advanced services</a>
+        </div>
+    </div>
+    <hr style="width: 70%; margin-top: 30px;">
+    <h2 style="color: blue; text-align: center;">Read our Totaltech FAQs</h2>
+    <hr style="width: 70%;">
+    <div id="btm-1">
+    <div>
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-72259-pol-mybby-220503-6a5a8474-b0a4-4d42-8bf8-6c6b55497c1a.jpg;maxHeight=305;maxWidth=390" alt="">
+
+    </div>
+    <div>
+        <h1>
+            Earn reward points on all eligible purchases.</h1>
+            <p>When you join Best Buy Totaltech™, you’ll also become a member of the My Best Buy® program. The My Best Buy program is free and allows you to earn reward points on all eligible purchases, view your purchase history, product warranties and more.</p>
+            <a href="">Learn more about My Best Buy</a>
+    </div>
+    </div>
+    <div id="btm-2">
+         <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-72682-pol-ttc-pm-643ce8f0-af86-42b3-8394-a5a74f8fe579.jpg;maxHeight=280;maxWidth=412" alt="">
+            <h3>Building brighter futures.</h3>
+            <p>Best Buy Teen Tech Center® programs provide tech access, training and mentorship to young people in disinvested communities.</p>
+         </div>
+         <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/FO-695-tt-contactless-cc-851c2c7d-620e-41f6-a796-051955d93fbb.jpg;maxHeight=280;maxWidth=412" alt="">
+            <h3>Limited time: 6 month financing</h3>
+            <p>on new Best Buy Totaltech™ membership purchases $199 and up. Offer ends 8/27/22.</p>
+         </div>
+         <div>
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/evn192164-iha-pol-der-ac0d95bd-cf49-4f1e-b2f9-7f2c8d1903a2.jpg;maxHeight=280;maxWidth=412" alt="">
+            <h3>Schedule a free home consultation.</h3>
+            <p>Let a Best Buy Home Expert help you bring your dreams to life. Tech, appliances and more.
+            </p>
+         </div>
+    </div>
+    <br>
+    <h3>Disclosures.</h3>
+    <hr>
+    <p style="width: 70%; margin:auto">A Best Buy Totaltech™ membership is subject to complete Terms and Conditions. A My Best Buy® account is required, subject to the My Best Buy Program Terms. This membership renews automatically each year and your chosen card will be charged $199.99, or the then-current price, plus tax, on your yearly renewal date unless you cancel before then by calling 1-888-BEST BUY (1-888-237-8289) or by managing subscriptions on your BestBuy.com account. We will send you advance notice of membership renewal to the email address you provide, including notice of any price changes.
+</p>
+<br>
+<br>
+<p style="width: 70%; margin:auto; color: gray;"> See the complete Terms and Conditions for Best Buy Protection and AppleCare+ under the “Protection” tab. Best Buy Product Protection, Inc. is the Obligor and Administrator of the Coverage under Best Buy Protection Plans. The company obligated under AppleCare+ in the United States is AppleCare Service Company, Inc., an Arizona corporation and wholly owned subsidiary of Apple Inc., doing business in Texas as Apple CSC Inc. Service fees and claim limits apply.
+   </p>
+   <p style="width: 70%; margin:auto; color: gray;">
+    Members will benefit from a 60-day return and exchange period on “most products,” as indicated in our Returns and Exchanges Policy. Membership also includes a waiver of all restocking fees. All other terms and conditions of our Returns and Exchanges Policy apply, including, for example, the 14-day return period on activatable devices (select carriers may have a longer return period).
+    Some limitations may apply on free delivery. Free haul-away applies when a haul-away is part of a scheduled delivery and/or installation.
+    Totaltech member prices will be displayed on select products in store and online for recognized members.
+    Discounts only apply to then-current labor costs. Fees for necessary parts, accessories or permits will be charged.
+   </p>
+   <br>
+   <p style="width: 70%; margin:auto; color: gray;">  Some limitations may apply. Fees for necessary parts, accessories or permits will be charged. Delivery and standard installation must be scheduled as part of the qualifying product purchase.
+    To get free 2-day shipping and free same-day delivery, make sure you are signed into your account. You can log into your account at any time during your shopping experience to ensure you are able to take advantage of your membership benefits. 2-day shipping and same-day delivery not available in all areas. Select items limited to free standard shipping at the time of purchase. Limitations apply, including extra days for shipping due to limited inventory, constrained carrier capacity, or other conditions beyond our control. See details for same-day delivery at Same-Day Delivery FAQs. Orders to P.O. Boxes may result in additional shipping time.</p>
+
+    <div id="MainFooter">
+        <div>
+          <h3>Order and Purches</h3>
+          <p>Check Order Status</p>
+          <p>Shipping, Delivery & Pickup</p>
+          <p>Return & Exchanges</p>
+          <p>Price Match Guarantee</p>
+          <p>Product Recalls</p>
+          <p>Trade-In Program</p>
+          <p>Gift Cards</p>
+          <h3>Payments options</h3>
+          <p>My Best Buy Credit Card</p>
+          <p>Pay Your Bill at Citibank</p>
+          <p>Lease to Own</p>
+        </div>
+        <div>
+          <h3>Supports and service</h3>
+          <p>Visit our Support Center</p>
+          <p>Shope with an Expert</p>
+          <p>Schedule a Service</p>
+          <p>Manage an Appoinment</p>
+          <p>Protection & Support Plans</p>
+          <p>Haul Away & Recycling</p>
+          <p>Contact Us</p>
+          <h3>Rewards and Membership order</h3>
+          <p>Best Buy Totaltech</p>
+          <p>My best Buy</p>
+          <p>View Points and certificate</p>
+        </div>
+        <div>
+          <h3>Partnership</h3>
+          <p>Affiliate Program</p>
+          <p>Advertise with Us</p>
+          <p>Developers</p>
+          <p>Best Buy Health</p>
+          <p>Best Buy Education</p>
+          <p>Best Buy Business
+          </p>
+          <p>Check Order Status</p>
+          <h3>Payments options</h3>
+          <p>Corporate Information</p>
+          <p>Careers</p>
+          <p>Corporate Responsibility & Sustainability</p>
+        </div>
+        <div style="border: 1px solid grey;
+       background-color: white;
+       margin: auto; padding: 20px; ">
+         <p>Sign in Create Account</p>
+         <hr>
+         <h2>Get the latest deals and more.</h2>
+         <input type="text" value="Enter Email Address">
+         <input style="color: black; background-color: blue;" type="button" value="SignUp">
+         <hr>
+         <h1>Best Buy App</h1>
+         <hr>
+         <div style="display: flex;
+          justify-content: space-around; margin-bottom: 5px;">
+          <img style="width: 30px; height:30px" src="data:image/png;base64,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" alt="">
+          <img style="width: 30px; height:30px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIUAAACFCAMAAABCBMsOAAAAY1BMVEX///8dofIAnfIAmfEAm/EUn/L5/f/S6vy83/ri8v0Al/GMyfcho/LD4/vY7PzK5vvw+P623Po/q/NUsfSu2PlluPWCxfel1PmWzfhwvvbn8f0AlPFSrvRbtPTn9f2d0fkAj/BhOMwJAAADhUlEQVR4nO2a2YKjIBBFBSmXgIq4JE4ncf7/K0dNdzqLCqFM98PUeZXgtSguBSQICIIgCIIgCIIgCIIg/i90nCVZrH9RQRRLwwA4B2ZkHD0+/RkRWcU4ABsZpLAqu3taH35CQ9rsLgq+gLBJr0+T6qPw77upHRsmcK9h0sHK6Vl+UII3/iJygNipYcmfNIyIUsfyqIZECXN/FVKASu3NBhHPkfgMhxCTnNZfRKDGfuzRyJdEXGNyQsyQ8278HGUNprGI4NV5bJb6SUnEJaqWaNShRYQZXazoPEelF5fBFaszRav1UCip87qDD+MnIpCfmQ+8XQlmKdZDoSrDBIBxSfM52uv846fzYquTJSvY+BzA27XktwsA7BcapZYBuRC6+c4c+5tYgzjNz5XMQQSwbPa3TiR3yc+ZnFuxa0tajCIUYhEJ9Md9Z5z1zzoO8+Z9K987MS882hEIJh97lDYV0CBLi/75DVw12V2vVhUcs4aMpHOfBqFqb5Ktt+UF75AqbhzjTggX/HTILutCYo0FWsXZLPU9lJfKHBtZ9xYR+BEZvnS33D2M6SrsU0SiVQyFju0tNsSS6zpSjO7Q2koYq4oEp6Ix/eAOPVKF/zp2oeViZ7p9g5Nhr9XWmawAsCNikPvFzFLKOQEnnIggWpmmzuDtApkRE9gpsrjleonwD1ZFZNtpOGDwRwYZ2jlhA/8OWqwMgfSsicipwl4JhdpAxFB7GlSGbrCsT6QVSob/PuQe3YXeowLHjUQMJCacOTByYX2f/SJR0ijlowK7kn2Tax1FuvQxMGyZdYP8YApCP9/YTESgwTMpGN8yK3z9EzZYQr7RnqEQiOOCGazbr3kRG9nmFb9Nyea3AN3rFSi+xnpGiheTQ2xRVzxRqpdGhWOPThbQLbjHA9TbLq3OfRWGTkoAcCdZ60S6qDuXWGxR5q2RH63BAL6tXT0RSfuUhfC9kYhqZXdRh/sUlIaycpisAnnEuk56MC7TI3yTTwzoojf2U7RxNNiWFcVAVMR/BvJk356U20kKiGrzlEibv7twN9gUdyy1+OIVCor8hY3I4O5rt1oo4oa5nWoJ1b5zauT2NQy4UId3ahjRZcMHIfNSAETIujcb9peQpDNKiIcsHW8GVNUWP/jHE51nsjEKxr+a8GnWqGO3zzwvrXFE57zIkiQp4lT/xvsJgiAIgiAIgiAIgiB+i39YwSbCS+j1QgAAAABJRU5ErkJggg==" alt="">
+          <img style="width: 30px; height:30px" src="data:image/jpeg;base64,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" alt="">
+          <img style="width: 30px; height:30px" src="data:image/png;base64,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" alt="">
+  
+         </div>
+        </div>
+   </div>
+</body>
+</html>
